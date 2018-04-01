@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { Switch, Route } from 'react-router-dom';
 
 import { AppContainer } from './App.styles';
+import baseStyles from '../../theme/globalStyle';
 
 import Homepage from '../Homepage/Homepage';
 import Landing from '../Landing/Landing';
@@ -14,6 +15,7 @@ export default class App extends Component {
 	}
 
 	render() {
+		baseStyles();
 		return (
 			<AppContainer>
 				<Helmet

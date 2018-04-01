@@ -1,7 +1,7 @@
 import { injectGlobal } from 'styled-components';
 import { tomato } from './variables';
 
-injectGlobal`
+ const baseStyles = () => injectGlobal`
     @import url('https://fonts.googleapis.com/css?family=VT323');
     
     body {
@@ -14,3 +14,5 @@ injectGlobal`
         color: ${tomato};
     }
 `;
+
+ export default baseStyles;
