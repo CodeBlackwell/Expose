@@ -12,8 +12,8 @@ class Landing extends Component {
                 <Helmet
                     title="Landing"
                 />
-                <Title>Landing</Title>
                 <Navigation />
+                <Title>Landing</Title>
             </Container>
         );
     }
