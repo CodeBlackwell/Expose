@@ -6,10 +6,12 @@ import { KEY as APPLICATION_KEY } from '../../constants/appConstants';
 
 import {Title} from '../../theme/types';
 import {Container} from '../../theme/grid';
+import { mapFromImmutable } from '../../utils';
 
 
 class Homepage extends Component {
     render() {
+        const profiles = mapFromImmutable(this.props.profiles);
         return (
             <Container>
                 <Helmet
