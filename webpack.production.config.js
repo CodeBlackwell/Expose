@@ -1,7 +1,6 @@
 const path = require('path');
 const dist = path.join(__dirname, 'dist');
 const webpack = require('webpack');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -17,8 +16,9 @@ module.exports = [
 			publicPath: '/static/',
 		},
 		resolve: {
-			extensions: ['.js', '.jsx']
-		},
+			extensions: ['.js', '.jsx'],
+            modules: [path.resolve(__dirname, "src"), "node_modules"]
+        },
 		devtool: 'source-map',
 		module: {
 			rules: [
