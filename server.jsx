@@ -5,16 +5,20 @@ import {Helmet} from "react-helmet";
 import { ServerStyleSheet } from 'styled-components';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { fromJS } from 'immutable';
 
 import rootReducer from './src/reducers/rootReducer';
 import Template from './template';
 import App from './src/containers/App/App';
 
+const initState = fromJS({ application: { profiles: [] }});
+
 export default function serverRenderer({ clientStats, serverStats }) {
 	return (req, res, next) => {
 		const context = {};
         const sheet = new ServerStyleSheet();
-        const store = createStore(rootReducer);
+		let initialState = rootReducer(initState);
+        const store = createStore(rootReducer, initialState);
 
         const body = ReactDOMServer.renderToString(
             sheet.collectStyles(
@@ -25,7 +29,7 @@ export default function serverRenderer({ clientStats, serverStats }) {
 				</Provider>
 			)
 		);
-        const initialState = store.getState();
+		initialState = store.getState();
         const styles = sheet.getStyleTags();
         const helmet = Helmet.renderStatic();
 
