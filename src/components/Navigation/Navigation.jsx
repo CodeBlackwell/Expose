@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { NavItem, NavContainer } from './Navigation.styles';
 
 class Navigation extends Component {
     render() {
@@ -8,7 +9,7 @@ class Navigation extends Component {
             <div>
                 <ul>
                     <li>
-                        <Link to={'/'}>Homepage</Link>
+                        <NavItem to={'/'}>Homepage</NavItem>
                     </li>
                     <li>
                         <Link to={'/landing'}>Landing</Link>
