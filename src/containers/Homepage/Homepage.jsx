@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Helmet} from 'react-helmet';
 import { connect } from 'react-redux';
 
-import { KEY as APP_KEY } from '../../constants/appConstants';
+import { KEY as APPLICATION_KEY } from '../../constants/appConstants';
 
 import {Title} from '../../theme/types';
 import {Container} from '../../theme/grid';
@@ -22,13 +22,8 @@ class Homepage extends Component {
 }
 
 const mapStateToProps = function(state) {
-    const {
-        [APP_KEY]: {
-            profiles
-        }
-    } = state;
     return {
-        profiles
+        profiles: state.getIn([APPLICATION_KEY], 'profiles')
     }
 };
 

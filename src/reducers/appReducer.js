@@ -1,29 +1,18 @@
-import { FETCH_PROFILES } from '../constants/appconstants'
+import { fromJS } from 'immutable';
+import { createReducer } from 'redux-immutablejs';
+
+import { FETCH_PROFILES, KEY as APPLICATION_KEY } from '../constants/appconstants'
 
 const initialState = {
     profiles: []
 };
 
-const actionHandlers = {
+const appReducer = createReducer(fromJS(initialState), {
     [FETCH_PROFILES] (state, action) {
-        const {
-            payload: {
-                data: profile
-            }
-        }  = action;
 
-        return Object.assign({}, state, {
-            profile
-        });
+        const profiles  = action.payload.data;
+        return state.setIn([APPLICATION_KEY, 'profiles'], profiles);
     }
-};
+});
 
-
-// Setting up the reducer this way is an optimization for constant time lookup on action handlers
-const appReducer = function (state = initialState, action) {
-    if (actionHandlers[action.type] != null) {
-        return actionHandlers[action.type] (state, action)
-    }
-    return state
-};
 export default appReducer
