@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {Helmet} from 'react-helmet';
+import { connect } from 'react-redux';
 
-import Navigation from '../../components/Navigation/Navigation';
+import { KEY as APP_KEY } from '../../constants/appConstants';
+
 import {Title} from '../../theme/types';
 import {Container} from '../../theme/grid';
+
 
 class Homepage extends Component {
     render() {
@@ -18,4 +21,15 @@ class Homepage extends Component {
     }
 }
 
-export default Homepage;
+const mapStateToProps = function(state) {
+    const {
+        [APP_KEY]: {
+            profiles
+        }
+    } = state;
+    return {
+        profiles
+    }
+};
+
+export default connect(mapStateToProps)(Homepage);

@@ -7,6 +7,7 @@ import { tomato } from './variables';
     body {
         font-family: 'VT323', monospace;
         font-size: 24px;
+        margin: 0;
     }
     
     h1, h2, h3 {
