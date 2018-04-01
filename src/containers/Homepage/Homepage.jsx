@@ -12,7 +12,6 @@ class Homepage extends Component {
                 <Helmet
                     title="Welcome to our Homepage"
                 />
-                <Navigation />
                 <Title>Homepage</Title>
             </Container>
         );

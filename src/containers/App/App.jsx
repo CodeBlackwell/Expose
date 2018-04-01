@@ -7,6 +7,7 @@ import baseStyles from '../../theme/globalStyle';
 
 import Homepage from '../Homepage/Homepage';
 import Landing from '../Landing/Landing';
+import Navigation from '../../components/Navigation/Navigation';
 
 
 export default class App extends Component {
@@ -27,6 +28,7 @@ export default class App extends Component {
 						{name: "viewport", content: "width=device-width, initial-scale=1"},
 					]}
 				/>
+				<Navigation/>
 				<Switch>
 					<Route exact path='/' component={ Homepage } />
 					<Route path="/landing" component={ Landing } />
