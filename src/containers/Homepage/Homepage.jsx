@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import Menu from '../../components/Menu/Menu';
+import React, {Component} from 'react';
+import {Helmet} from 'react-helmet';
+
+import Navigation from '../../components/Navigation/Navigation';
+import {Title} from '../../theme/types';
+import {Container} from '../../theme/grid';
 
 class Homepage extends Component {
     render() {
         return (
-            <div>
+            <Container>
                 <Helmet
                     title="Welcome to our Homepage"
                 />
-                <Menu />
-                <h1>Homepage</h1>
-            </div>
+                <Navigation />
+                <Title>Homepage</Title>
+            </Container>
         );
     }
 }

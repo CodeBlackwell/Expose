@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-import Menu from '../../components/Menu/Menu';
+import Navigation from '../../components/Navigation/Navigation';
+import { Title } from '../../theme/types';
+import { Container } from '../../theme/grid';
 
 class Landing extends Component {
     render() {
         return (
-            <div>
+            <Container>
                 <Helmet
-                    title="About us"
+                    title="Landing"
                 />
-                <Menu />
-                <h1>Landing</h1>
-            </div>
+                <Title>Landing</Title>
+                <Navigation />
+            </Container>
         );
     }
 }
