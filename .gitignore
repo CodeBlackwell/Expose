@@ -6,5 +6,3 @@ node_modules
 static
 
 .idea
-
-yarn.lock
