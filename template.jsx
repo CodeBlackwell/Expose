@@ -1,4 +1,4 @@
-export default ({ body, helmet, styles }) => {
+export default ({ body, helmet, styles, initialState }) => {
 	return `<!doctype html>
 <html ${helmet.htmlAttributes.toString()}>
 <head>
@@ -9,6 +9,9 @@ export default ({ body, helmet, styles }) => {
 </head>
 <body ${helmet.bodyAttributes.toString()}>
 	<div id="root">${body}</div>
+	<script>
+          window.__INITIAL_STATE__ = ${JSON.stringify(initialState).replace(/</g, '\\u003c')}
+        </script>
 	<script src="/static/client.js" async></script>
 </body>
 </html>`;
