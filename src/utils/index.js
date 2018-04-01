@@ -1,0 +1,1 @@
+export { mapFromImmutable } from './getters';
