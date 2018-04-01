@@ -5,6 +5,7 @@ module.exports = [
 		name: 'client',
 		target: 'web',
 		entry: './client.jsx',
+		mode: 'development',
 		output: {
 			path: path.join(__dirname, 'static'),
 			filename: 'client.js',
@@ -53,6 +54,7 @@ module.exports = [
 		name: 'server',
 		target: 'node',
 		entry: './server.jsx',
+		mode: 'development',
 		output: {
 			path: path.join(__dirname, 'static'),
 			filename: 'server.js',

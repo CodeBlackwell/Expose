@@ -4,12 +4,14 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const env = process.env.NODE_ENV;
 
 module.exports = [
 	{
 		name: 'client',
 		target: 'web',
 		entry: './client.jsx',
+		mode: env || 'production',
 		output: {
 			path: path.join(__dirname, 'static'),
 			filename: 'client.js',
