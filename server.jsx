@@ -11,14 +11,15 @@ export default function serverRenderer({ clientStats, serverStats }) {
 	return (req, res, next) => {
 		const context = {};
         const sheet = new ServerStyleSheet();
-        // const body = renderToString(sheet.collectStyles(<App />));
-        const styles = sheet.getStyleTags();
-
         const body = ReactDOMServer.renderToString(
+            sheet.collectStyles(
 			<StaticRouter location={ req.url } context={ context }>
 				<App />
 			</StaticRouter>
+			)
 		);
+        const styles = sheet.getStyleTags();
+
         const helmet = Helmet.renderStatic();
 
 		res.status(200).send(Template({
