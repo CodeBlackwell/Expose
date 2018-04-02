@@ -9,6 +9,8 @@ import {Container, Relative} from '../../theme/grid';
 import {DiverImage} from './Homepage.styles';
 import { mapFromImmutable } from '../../utils';
 
+import Testimonials from '../../components/Testimonials/Testimonials'
+
 
 class Homepage extends Component {
     render() {
@@ -24,6 +26,7 @@ class Homepage extends Component {
                             <H2 align="center">Anywhere</H2>
                         </Relative>
                     </DiverImage>
+                    <Testimonials/>
                 </Container>
         );
     }
