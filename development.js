@@ -8,6 +8,7 @@ const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
 const config = require('./webpack.development.config.js');
 const compiler = webpack(config);
 
+const API = require('./API/API');
 app.use(webpackDevMiddleware(compiler, {
 	publicPath: "/static/",
 }));
@@ -15,3 +16,6 @@ app.use(webpackHotMiddleware(compiler.compilers.find(compiler => compiler.name =
 app.use(webpackHotServerMiddleware(compiler));
 
 app.listen(3000);
+
+API(express, 3001);
+
