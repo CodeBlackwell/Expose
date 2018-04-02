@@ -14,17 +14,17 @@ class Homepage extends Component {
     render() {
         const profiles = mapFromImmutable(this.props.profiles);
         return (
-            <Container display="inline">
-                <Helmet
-                    title="Welcome to our Homepage"
-                />
-                <DiverImage justify="center">
-                    <Relative align="center">
-                        <H1 align="center">Pizza</H1>
-                        <H2 align="center">Anywhere</H2>
-                    </Relative>
-                </DiverImage>
-            </Container>
+                <Container display="inline">
+                    <Helmet
+                        title="The Home of Unbelievable Pizza"
+                    />
+                    <DiverImage justify="center">
+                        <Relative align="center">
+                            <H1 align="center">Pizza</H1>
+                            <H2 align="center">Anywhere</H2>
+                        </Relative>
+                    </DiverImage>
+                </Container>
         );
     }
 }

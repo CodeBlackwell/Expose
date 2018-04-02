@@ -23,7 +23,6 @@ ${ ({ display }) => display && css`
 `}
 padding-left: 120px;
 padding-right: 120px;
-padding-top: 30px;
 ${media.giant`
     padding-left: 30px;
     padding-right: 30px;

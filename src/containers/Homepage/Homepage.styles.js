@@ -5,6 +5,7 @@ import media from '../../theme/media';
 export const DiverImage = styled(Flex)`
     height: 100vh;
     width: 100vw;
+    margin-top: -48px;
     
     background-repeat: no-repeat;
     background-image: url('${require('../../assets/eating.jpg')}');
