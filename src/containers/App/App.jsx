@@ -28,7 +28,6 @@ import Navigation from '../../components/Navigation/Navigation';
 						{name: "viewport", content: "width=device-width, initial-scale=1"},
 					]}
 				/>
-				<Navigation/>
 				<Switch>
 					<Route exact path='/' component={ Homepage } />
 					<Route path="/landing" component={ Landing } />
