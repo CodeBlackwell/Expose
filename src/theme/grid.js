@@ -18,6 +18,9 @@ export const Div = styled.div`
 `;
 
 export const Container = styled(Div)`
+${ ({ display }) => display && css`
+    display: ${display};
+`}
 padding-left: 120px;
 padding-right: 120px;
 padding-top: 30px;

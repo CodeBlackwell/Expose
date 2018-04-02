@@ -14,7 +14,7 @@ class Homepage extends Component {
     render() {
         const profiles = mapFromImmutable(this.props.profiles);
         return (
-            <Container>
+            <Container display="inline">
                 <Helmet
                     title="Welcome to our Homepage"
                 />
