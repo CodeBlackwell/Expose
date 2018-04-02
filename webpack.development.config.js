@@ -46,7 +46,17 @@ module.exports = [
 							loader: 'sass-loader'
 						}
 					]
-				}
+				},
+                {
+                    test: /\.(png|jp(e*)g|svg)$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            limit: 25000,
+                            name: 'assets/[hash]-[name].[ext]'
+                        }
+                    }]
+                }
 			],
 		},
 	},
@@ -95,7 +105,17 @@ module.exports = [
 							loader: 'sass-loader'
 						}
 					]
-				} 
+				},
+                {
+                    test: /\.(png|jp(e*)g|svg)$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            limit: 25000,
+                            name: 'assets/[hash]-[name].[ext]'
+                        }
+                    }]
+                }
 			],
 		},
 	}

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import {Flex} from '../../theme/grid';
 import media from '../../theme/media';
 
@@ -8,7 +7,7 @@ export const DiverImage = styled(Flex)`
     width: 100vw;
     
     background-repeat: no-repeat;
-    background-image: url('https://i.imgur.com/pjUgyei.jpg')}');
+    background-image: url('${require('../../assets/eating.jpg')}');
     background-size: cover;
     background-position: center;
     
@@ -22,7 +21,8 @@ export const DiverImage = styled(Flex)`
     font-size: 2em;
     
     h1 {
-    margin-bottom: 0;
+        margin-bottom: 0;
+        font-family: 'Dancing Script', cursive;
     }
     ${media.phone`
         h1 {
