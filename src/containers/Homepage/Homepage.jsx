@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Helmet} from 'react-helmet';
 import { connect } from 'react-redux';
 
+
 import { KEY as APPLICATION_KEY } from '../../constants/appConstants';
 
 import {H1, H2} from '../../theme/types';
@@ -11,11 +12,23 @@ import { mapFromImmutable } from '../../utils';
 
 import Testimonials from '../../components/Testimonials/Testimonials';
 import Footer from '../../components/Footer/Footer';
+import ForceGraph from '../../components/ForceGraph/ForceGraph';
+
 
 
 class Homepage extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = { nodes: 200 };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+
     render() {
         const profiles = mapFromImmutable(this.props.profiles);
+        const { nodes } = this.state;
         return (
                 <Container display="inline">
                     <Helmet
@@ -30,10 +43,28 @@ class Homepage extends Component {
                             </H2>
                         </Relative>
                     </DiverImage>
+                    <Relative>
+                        <ForceGraph numberOfNodes={nodes} width={1000} height={500} transform='skewX(60)'/>
+                    </Relative>
+                        <form onSubmit={this.handleSubmit}>
+                            <label>
+                                Pick a number!
+                                <input type="number" value={this.state.nodes} onChange={this.handleChange}/>
+                            </label>
+                            <input type="submit" value="Submit"/>
+                        </form>
                     <Testimonials/>
                     <Footer/>
                 </Container>
         );
+    }
+
+    handleChange(event) {
+        this.setState({nodes: event.target.value});
+    }
+    handleSubmit(event) {
+        console.log(this.state);
+        event.preventDefault();
     }
 }
 
