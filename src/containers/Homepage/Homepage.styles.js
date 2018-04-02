@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+
+import {Flex} from '../../theme/grid';
 import media from '../../theme/media';
 
-export const DiverImage = styled.div`
+export const DiverImage = styled(Flex)`
     height: 100vh;
     width: 100vw;
     
@@ -13,7 +15,6 @@ export const DiverImage = styled.div`
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: flex-end;
     
     text-align: center;
     color: white;

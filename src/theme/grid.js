@@ -46,6 +46,9 @@ ${media.phone`
 
 export const Relative = styled(Div)`
     position: relative;
+    ${ ({align}) => align && css`
+        align-self: ${align}
+    `} 
 `;
 
 export const Flex = styled(Div)`

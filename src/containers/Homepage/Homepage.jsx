@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 
 import { KEY as APPLICATION_KEY } from '../../constants/appConstants';
 
-import {Title} from '../../theme/types';
-import {Container} from '../../theme/grid';
+import {H1, H2} from '../../theme/types';
+import {Container, Relative} from '../../theme/grid';
+import {DiverImage} from './Homepage.styles';
 import { mapFromImmutable } from '../../utils';
 
 
@@ -17,7 +18,12 @@ class Homepage extends Component {
                 <Helmet
                     title="Welcome to our Homepage"
                 />
-                <Title>Homepage</Title>
+                <DiverImage justify="center">
+                    <Relative align="center">
+                        <H1 align="center">Pizza</H1>
+                        <H2 align="center">Anywhere</H2>
+                    </Relative>
+                </DiverImage>
             </Container>
         );
     }
