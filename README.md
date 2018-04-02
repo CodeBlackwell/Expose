@@ -9,6 +9,7 @@ A Modern Isomorphic React+Redux+ImmutableJS application
 - ReactDOM @16.3.0 
 - Webpack @4.4.1
 - react-router-DOM @4.1.1 - The new Declarative React Router
+- ImmutableJS
 - Redux - managing state
 - Styled-components -They are just groovy dude..
 - ES6/babel - because ES6 is awesome
