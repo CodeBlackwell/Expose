@@ -9,7 +9,8 @@ import {Container, Relative} from '../../theme/grid';
 import {DiverImage} from './Homepage.styles';
 import { mapFromImmutable } from '../../utils';
 
-import Testimonials from '../../components/Testimonials/Testimonials'
+import Testimonials from '../../components/Testimonials/Testimonials';
+import Footer from '../../components/Footer/Footer';
 
 
 class Homepage extends Component {
@@ -22,11 +23,15 @@ class Homepage extends Component {
                     />
                     <DiverImage justify="center">
                         <Relative align="center">
-                            <H1 align="center">Pizza</H1>
-                            <H2 align="center">Anywhere</H2>
+                            <H1 align="center">Unbelievable Pizza</H1>
+                            <br/>
+                            <H2 align="center">
+                                ..Nothing more to Say
+                            </H2>
                         </Relative>
                     </DiverImage>
                     <Testimonials/>
+                    <Footer/>
                 </Container>
         );
     }

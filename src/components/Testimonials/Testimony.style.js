@@ -11,4 +11,7 @@ export const Testimony = styled(Relative)`
     > img {
         display: inline-block;
     }
+    > h3 {
+        display: inline;
+    }
 `;
