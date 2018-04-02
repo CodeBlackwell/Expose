@@ -9,5 +9,4 @@ export const AppContainer = styled.div`
   width: 100%;
   height: 100%;
   font-size: 40px;
-  background: linear-gradient(20deg, ${red}, ${white});
 `;

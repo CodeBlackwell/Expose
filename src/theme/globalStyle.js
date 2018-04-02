@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { tomato } from './variables';
+import { tomato, red, white } from './variables';
 
  const baseStyles = () => injectGlobal`
     @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
@@ -8,6 +8,7 @@ import { tomato } from './variables';
         font-family: 'Dancing Script', cursive;
         font-size: 24px;
         margin: 0;
+        background: linear-gradient(20deg, ${red}, ${white});
     }
     
     h1, h2, h3 {
