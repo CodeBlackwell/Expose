@@ -8,7 +8,6 @@ import { KEY as APPLICATION_KEY } from '../../constants/appConstants';
 import {H1, H2} from '../../theme/types';
 import {Container, Relative} from '../../theme/grid';
 import {DiverImage} from './Homepage.styles';
-import { mapFromImmutable } from '../../utils';
 
 import Testimonials from '../../components/Testimonials/Testimonials';
 import Footer from '../../components/Footer/Footer';
@@ -27,7 +26,6 @@ class Homepage extends Component {
 
 
     render() {
-        const profiles = mapFromImmutable(this.props.profiles);
         const { nodes } = this.state;
         return (
                 <Container display="inline">
