@@ -42,7 +42,8 @@ class Homepage extends Component {
                         </Relative>
                     </DiverImage>
                     <Relative>
-                        <ForceGraph numberOfNodes={nodes} width={1000} height={500} transform='skewX(60)'/>
+                        <ForceGraph numberOfNodes={nodes} width={1000} height={500} />
+
                     </Relative>
                         <form onSubmit={this.handleSubmit}>
                             <label>
