@@ -41,9 +41,9 @@ class Homepage extends Component {
                             </H2>
                         </Relative>
                     </DiverImage>
+                    {/*@TODO: FIX: The ForceGraph keeps Changing Viewport/Viewbox.*/}
                     <Relative>
                         <ForceGraph numberOfNodes={nodes} width={1000} height={500} />
-
                     </Relative>
                         <form onSubmit={this.handleSubmit}>
                             <label>
